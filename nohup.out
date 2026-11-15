@@ -41,3 +41,116 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 <standard input>:49:25: illegal character U+3002 '。'
 <standard input>:49:67: illegal character U+FF0C '，'
 <standard input>:49:100: illegal character U+3002 '。'
+2026-11-15 22:59:02,349 [1277309]   WARN - #o.j.c.f.l.l.s.c.FullLineCompletionInputBuilder - Sequence is empty.
+java.util.NoSuchElementException: Sequence is empty.
+	at kotlin.sequences.SequencesKt___SequencesKt.first(_Sequences.kt:117)
+	at org.jetbrains.completion.full.line.local.generation.ChunkTrimmer$Companion.trimLines(ChunkTrimmer.kt:29)
+	at org.jetbrains.completion.full.line.local.generation.ChunkTrimmer$Companion.trim(ChunkTrimmer.kt:18)
+	at org.jetbrains.completion.full.line.local.generation.RecentContextRetriever$retrieveChunks$2$1.invoke(RecentContextRetriever.kt:84)
+	at org.jetbrains.completion.full.line.local.generation.RecentContextRetriever$retrieveChunks$2$1.invoke(RecentContextRetriever.kt:74)
+	at com.intellij.openapi.application.rw.InternalReadAction.insideReadAction(InternalReadAction.kt:119)
+	at com.intellij.openapi.application.rw.InternalReadAction.tryReadCancellable$lambda$0(InternalReadAction.kt:109)
+	at com.intellij.openapi.application.rw.CancellableReadActionKt.cancellableReadActionInternal$lambda$0$0$0(cancellableReadAction.kt:32)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.tryRunReadAction(NestedLocksThreadingSupport.kt:900)
+	at com.intellij.openapi.application.impl.ApplicationImpl.tryRunReadAction(ApplicationImpl.java:1266)
+	at com.intellij.openapi.application.rw.CancellableReadActionKt.cancellableReadActionInternal$lambda$0$0(cancellableReadAction.kt:30)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtilService.runActionAndCancelBeforeWrite(ProgressIndicatorUtilService.java:73)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtils.runActionAndCancelBeforeWrite(ProgressIndicatorUtils.java:168)
+	at com.intellij.openapi.application.rw.CancellableReadActionKt.cancellableReadActionInternal$lambda$0(cancellableReadAction.kt:28)
+	at com.intellij.concurrency.ThreadContext.installThreadContext(threadContext.kt:305)
+	at com.intellij.concurrency.ThreadContext.installThreadContext$default(threadContext.kt:303)
+	at com.intellij.openapi.application.rw.CancellableReadActionKt.cancellableReadActionInternal(cancellableReadAction.kt:24)
+	at com.intellij.openapi.application.rw.InternalReadAction.tryReadCancellable(InternalReadAction.kt:108)
+	at com.intellij.openapi.application.rw.InternalReadAction.tryReadAction(InternalReadAction.kt:94)
+	at com.intellij.openapi.application.rw.InternalReadAction.readLoop(InternalReadAction.kt:81)
+	at com.intellij.openapi.application.rw.InternalReadAction.access$readLoop(InternalReadAction.kt:23)
+	at com.intellij.openapi.application.rw.InternalReadAction$runReadAction$6.invokeSuspend(InternalReadAction.kt:60)
+	at com.intellij.openapi.application.rw.InternalReadAction$runReadAction$6.invoke(InternalReadAction.kt)
+	at com.intellij.openapi.application.rw.InternalReadAction$runReadAction$6.invoke(InternalReadAction.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:67)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.openapi.application.rw.InternalReadAction.runReadAction(InternalReadAction.kt:58)
+	at com.intellij.openapi.application.rw.PlatformReadWriteActionSupport.executeReadAction(PlatformReadWriteActionSupport.kt:75)
+	at com.intellij.openapi.application.ReadWriteActionSupport.executeReadAction$default(ReadWriteActionSupport.kt:15)
+	at com.intellij.openapi.application.CoroutinesKt.constrainedReadAction(coroutines.kt:66)
+	at com.intellij.openapi.application.CoroutinesKt.readAction(coroutines.kt:31)
+	at org.jetbrains.completion.full.line.local.generation.RecentContextRetriever$retrieveChunks$$inlined$mapNotNull$1$2.emit(Emitters.kt:52)
+	at kotlinx.coroutines.flow.FlowKt__BuildersKt$asFlow$$inlined$unsafeFlow$3.collect(SafeCollector.common.kt:111)
+	at org.jetbrains.completion.full.line.local.generation.RecentContextRetriever$retrieveChunks$$inlined$mapNotNull$1.collect(SafeCollector.common.kt:109)
+	at kotlinx.coroutines.flow.FlowKt__LimitKt$takeWhile$$inlined$unsafeFlow$1.collect(SafeCollector.common.kt:120)
+	at kotlinx.coroutines.flow.FlowKt__CollectionKt.toCollection(Collection.kt:22)
+	at kotlinx.coroutines.flow.FlowKt.toCollection(Unknown Source)
+	at kotlinx.coroutines.flow.FlowKt__CollectionKt.toList(Collection.kt:11)
+	at kotlinx.coroutines.flow.FlowKt.toList(Unknown Source)
+	at kotlinx.coroutines.flow.FlowKt__CollectionKt.toList$default(Collection.kt:11)
+	at kotlinx.coroutines.flow.FlowKt.toList$default(Unknown Source)
+	at org.jetbrains.completion.full.line.local.generation.RecentContextRetriever.retrieveChunks(RecentContextRetriever.kt:90)
+	at org.jetbrains.completion.full.line.local.generation.RecentContextRetriever.getContextIds(RecentContextRetriever.kt:34)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.buildRecentContext(FullLineCompletionInputBuilder.kt:146)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.smartContextComposition(FullLineCompletionInputBuilder.kt:73)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.build(FullLineCompletionInputBuilder.kt:56)
+	at org.jetbrains.completion.full.line.impl.providers.LocalFullLineCompletionClient.composeContext(LocalFullLineCompletionClient.kt:48)
+	at org.jetbrains.completion.full.line.impl.providers.LocalFullLineCompletionClient$composeContext$1.invokeSuspend(LocalFullLineCompletionClient.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+2026-11-15 23:00:14,480 [1349440]   WARN - #o.j.c.f.l.l.s.c.FullLineCompletionInputBuilder - LazyStandaloneCoroutine was cancelled
+java.lang.Throwable: Control-flow exceptions (e.g. this class kotlinx.coroutines.JobCancellationException) should never be logged. Instead, these should have been rethrown if caught.
+	at com.intellij.openapi.diagnostic.Logger.ensureNotControlFlow(Logger.java:506)
+	at com.intellij.idea.IdeaLogger.warn(IdeaLogger.java:168)
+	at com.intellij.openapi.diagnostic.Logger.warn(Logger.java:353)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.buildRecentContext(FullLineCompletionInputBuilder.kt:152)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.access$buildRecentContext(FullLineCompletionInputBuilder.kt:30)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder$buildRecentContext$1.invokeSuspend(FullLineCompletionInputBuilder.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.UndispatchedCoroutine.afterResume(CoroutineContext.kt:277)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:47)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+Caused by: kotlinx.coroutines.JobCancellationException: LazyStandaloneCoroutine was cancelled; job=LazyStandaloneCoroutine{Cancelling}@34445284
+2026-11-15 23:00:31,950 [1366910]   WARN - #o.j.c.f.l.l.s.c.FullLineCompletionInputBuilder - LazyStandaloneCoroutine was cancelled
+java.lang.Throwable: Control-flow exceptions (e.g. this class kotlinx.coroutines.JobCancellationException) should never be logged. Instead, these should have been rethrown if caught.
+	at com.intellij.openapi.diagnostic.Logger.ensureNotControlFlow(Logger.java:506)
+	at com.intellij.idea.IdeaLogger.warn(IdeaLogger.java:168)
+	at com.intellij.openapi.diagnostic.Logger.warn(Logger.java:353)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.buildRecentContext(FullLineCompletionInputBuilder.kt:152)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.access$buildRecentContext(FullLineCompletionInputBuilder.kt:30)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder$buildRecentContext$1.invokeSuspend(FullLineCompletionInputBuilder.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.UndispatchedCoroutine.afterResume(CoroutineContext.kt:277)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:47)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+Caused by: kotlinx.coroutines.JobCancellationException: LazyStandaloneCoroutine was cancelled; job=LazyStandaloneCoroutine{Cancelling}@741868dd
+2026-11-15 23:00:42,427 [1377387]   WARN - #com.goide.dfa.symbolicExecution.summaries.GoDfaPredefinedSummaryProvider - Cannot create callable descriptor for FUNCTION_DECLARATION
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Background.Default.Dark is deprecated for new UI themes, use Checkbox.Background.Default instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Border.Default.Dark is deprecated for new UI themes, use Checkbox.Border.Default instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Border.Selected.Dark is deprecated for new UI themes, use Checkbox.Border.Selected instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Foreground.Selected.Dark is deprecated for new UI themes, use Checkbox.Foreground.Selected instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Focus.Wide.Dark is deprecated for new UI themes, use Checkbox.Focus.Wide instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: color key Checkbox.Focus.Thin.Default.Dark is not supported and therefore ignored
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: color key Checkbox.Focus.Thin.Selected.Dark is not supported and therefore ignored
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Background.Disabled.Dark is deprecated for new UI themes, use Checkbox.Background.Disabled instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Background.Selected.Dark is deprecated for new UI themes, use Checkbox.Background.Selected instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Border.Disabled.Dark is deprecated for new UI themes, use Checkbox.Border.Disabled instead
+2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Foreground.Disabled.Dark is deprecated for new UI themes, use Checkbox.Foreground.Disabled instead
+2026-11-15 23:03:08,773 [1523733]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-1854077437.txt
+2026-11-15 23:04:10,730 [1585690]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-547896843.txt

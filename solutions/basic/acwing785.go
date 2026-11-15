@@ -2,7 +2,7 @@ package basic
 
 import "fmt"
 
-func main() {
+func AcWing785() {
 	var n int
 	_, _ = fmt.Scanf("%d", &n)
 	q := make([]int, n)
