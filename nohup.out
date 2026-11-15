@@ -1,0 +1,43 @@
+nohup: goland: No such file or directory
+nohup: goland: No such file or directory
+nohup: goland: No such file or directory
+nohup: goland: No such file or directory
+nohup: goland: No such file or directory
+nohup: goland: No such file or directory
+2026-11-15 22:37:45,832 [    792]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.openapi.project.impl.ProjectStoreFactory: com.intellij.configurationScript.providers.ConfigurationScriptProjectStoreFactory attempts to override com.intellij.configurationStore.PlatformLangProjectStoreFactory, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-15 22:37:45,837 [    797]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.goide.watchers.GoFileWatcherFormatOnSavePresentationService attempts to override com.goide.formatter.GoFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-15 22:37:45,838 [    798]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.modcommand.ModCommandExecutor: com.jetbrains.rdserver.ui.intentions.RemoteModCommandExecutor attempts to override com.intellij.lang.impl.modcommand.ModCommandExecutorImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-15 22:37:45,844 [    804]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.intellij.go.linter.fmt.GoLinterFmtOnSavePresentationService attempts to override com.goide.watchers.GoFileWatcherFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+2026-11-15 22:37:46,398 [   1358]   WARN - #c.i.u.n.s.ConfirmingTrustManager - Received an empty list of custom trusted root certificates from the system. Check log above for possible errors, enable debug logging in category 'org.jetbrains.nativecerts' for more information
+2026-11-15 22:37:46,435 [   1395]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - Discovery connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-15 22:37:46.578 goland[45370:3673788] *** WARNING: References to Carbon menus are disallowed with AppKit menu system on macOS 14 and newer. Use instances of NSMenu and NSMenuItem directly instead. See https://developer.apple.com/documentation/macos-release-notes/appkit-release-notes-for-macos-14#Menus
+2026-11-15 22:37:46,881 [   1841]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-15 22:37:48,039 [   2999]   WARN - #c.i.o.f.i.EditorCompositeModelManager - Cannot use saved provider list (savedProviders={split-provider[text-editor;markdown-preview-editor]=[Element: <state/>]}, resolvedProvider=[])
+2026-11-15 22:37:51,360 [   6320]   WARN - #c.i.o.a.i.ActionUpdater - 3122 ms total to grab EDT 5 times to expand ToolWindowHeader$2#expandGroup@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2). Use `ActionUpdateThread.BGT`.
+2026-11-15 22:37:51.402 cef_server[45395:3674175] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
+2026-11-15 22:37:51.475 cef_server[45395:3674141] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
+2026-11-15 22:37:52,049 [   7009]   WARN - go-linter - Command execution failed with exit code 1
+2026-11-15 22:37:52,594 [   7554]   WARN - #c.i.v.g.r.GitRepositoriesHolder - State of repository RepositoryId(projectId=ProjectId#51ct3u4mhmvqo23l3768, rootPath=/Users/huhongjian/code/learnGo) is not synchronized. Known repositories are: 
+2026-11-15 22:37:52,912 [   7872]   WARN - #org.intellij.plugins.markdown.ui.preview.jcef.impl.JcefBrowserPipeImpl - No subscribers for documentReady!
+Attached data: 
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by com.jetbrains.cef.JCefAppConfig$6 in module jcef (jrt:/jcef)
+WARNING: Use --enable-native-access=jcef to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-11-15 22:37:53,183 [   8143]   WARN - go-linter - Go executor for `go env GOPATH` failed: ExecutionResult{status=FAILED, message='Cannot run program "go": Exec failed, error: 2 (No such file or directory) '}; stderr: [Cannot run program "go": Exec failed, error: 2 (No such file or directory) ]
+2026-11-15 22:39:34,473 [ 109433]   WARN - org.apache.velocity.deprecation - configuration key 'resource.loader' has been deprecated in favor of 'resource.loaders'
+2026-11-15 22:39:34,474 [ 109434]   WARN - org.apache.velocity.deprecation - configuration key 'includes.resource.loader.instance' has been deprecated in favor of 'resource.loader.includes.instance'
+2026-11-15 22:44:57,013 [ 431973]   WARN - #com.goide.dfa.api.GoDfaApiImpl - Unable to get function summary for FUNCTION_DECLARATION
+2026-11-15 22:45:31,686 [ 466646]   WARN - #com.goide.formatter.service.GoFmtFormattingService - Failed to run gofmt on /Users/huhongjian/code/learnGo/solutions/basic/acwing785.go
+2026-11-15 22:45:31,686 [ 466646]   WARN - #com.goide.formatter.service.GoFmtFormattingService - <standard input>:46:1: expected declaration, found 作者
+<standard input>:46:7: illegal character U+FF1A '：'
+<standard input>:47:7: illegal character U+FF1A '：'
+<standard input>:48:7: illegal character U+FF1A '：'
+<standard input>:49:25: illegal character U+3002 '。'
+<standard input>:49:67: illegal character U+FF0C '，'
+<standard input>:49:100: illegal character U+3002 '。'
