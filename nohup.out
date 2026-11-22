@@ -181,3 +181,40 @@ java.lang.IllegalStateException: No updates were stored
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
 2026-11-21 22:40:10,631 [518545591]   WARN - #c.i.i.IdeEventQueue - System clock's jumped back by ~1 sec
 2026-11-22 16:29:11,573 [582686533]   WARN - #c.i.i.IdeEventQueue - System clock's jumped back by ~1 sec
+2026-11-22 16:55:58,642 [584293602]   WARN - #c.i.o.v.i.LineStatusTrackerManager - Tracker is being held on dispose by EditorImpl[LightVirtualFile: /terminal_output]; file: /terminal_output
+2026-11-22 16:55:58,869 [584293829]   WARN - #c.i.o.f.i.EditorsSplitters - No file exists: mock://Welcome to GoLand
+2026-11-22 16:56:01,333 [584296293]   WARN - #c.i.o.f.i.EditorComposite - Cannot focus editor (splitters=com.intellij.openapi.fileEditor.impl.EditorsSplitters[,623,0,1221x902,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=com.intellij.util.ui.JBEmptyBorder@182f4407,flags=9,maximumSize=,minimumSize=,preferredSize=], composite=EditorComposite(identityHashCode=1407621756, file=file:///Users/huhongjian/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/About/About.xml), currentComposite=EditorComposite(identityHashCode=1013876532, file=LightVirtualFile: Welcome to GoLand), reason=selection changed)
+2026-11-22 16:56:01,380 [584296340]   WARN - go-linter - Command execution failed with exit code 1
+Starting cer server. Pre-initialize spent 110 ms.
+2026-11-22 16:56:12,728 [    988]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.openapi.project.impl.ProjectStoreFactory: com.intellij.configurationScript.providers.ConfigurationScriptProjectStoreFactory attempts to override com.intellij.configurationStore.PlatformLangProjectStoreFactory, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-22 16:56:12,733 [    993]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.goide.watchers.GoFileWatcherFormatOnSavePresentationService attempts to override com.goide.formatter.GoFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-22 16:56:12,736 [    996]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.modcommand.ModCommandExecutor: com.jetbrains.rdserver.ui.intentions.RemoteModCommandExecutor attempts to override com.intellij.lang.impl.modcommand.ModCommandExecutorImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-22 16:56:12,741 [   1001]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.intellij.go.linter.fmt.GoLinterFmtOnSavePresentationService attempts to override com.goide.watchers.GoFileWatcherFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+2026-11-22 16:56:13,481 [   1741]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - Discovery connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-22 16:56:13,745 [   2005]   WARN - #c.i.u.n.s.ConfirmingTrustManager - Received an empty list of custom trusted root certificates from the system. Check log above for possible errors, enable debug logging in category 'org.jetbrains.nativecerts' for more information
+2026-11-22 16:56:13.787 goland[82178:5658835] *** WARNING: References to Carbon menus are disallowed with AppKit menu system on macOS 14 and newer. Use instances of NSMenu and NSMenuItem directly instead. See https://developer.apple.com/documentation/macos-release-notes/appkit-release-notes-for-macos-14#Menus
+2026-11-22 16:56:14,140 [   2400]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-22 16:56:16,112 [   4372]   WARN - #c.i.o.f.i.EditorCompositeModelManager - Cannot use saved provider list (savedProviders={split-provider[text-editor;markdown-preview-editor]=[Element: <state/>]}, resolvedProvider=[])
+2026-11-22 16:56:20,848 [   9108]   WARN - #c.i.l.u.p.RemoteFeatureDisabler - Failed to get contents
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1046)
+	at io.ktor.network.sockets.SocketImpl.connect$ktor_network(SocketImpl.kt:50)
+	at io.ktor.network.sockets.SocketImpl$connect$1.invokeSuspend(SocketImpl.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:130)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:1188)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+2026-11-22 16:56:21,018 [   9278]   WARN - go-linter - Command execution failed with exit code 1
+2026-11-22 16:56:21,228 [   9488]   WARN - #c.i.v.g.r.GitRepositoriesHolder - State of repository RepositoryId(projectId=ProjectId#rtj5aj7kvem87otj6k26, rootPath=/Users/huhongjian/code/learnGo) is not synchronized. Known repositories are: 
+2026-11-22 16:56:27.857 cef_server[82202:5659661] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
+2026-11-22 16:56:27.943 cef_server[82202:5659186] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
