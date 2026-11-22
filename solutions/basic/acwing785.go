@@ -2,6 +2,8 @@ package basic
 
 import "fmt"
 
+// AcWing785
+// 785.快速排序
 func AcWing785() {
 	var n int
 	_, _ = fmt.Scanf("%d", &n)
