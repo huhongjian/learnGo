@@ -154,3 +154,30 @@ Caused by: kotlinx.coroutines.JobCancellationException: LazyStandaloneCoroutine 
 2026-11-15 23:02:39,291 [1494251]   WARN - #c.i.i.u.UiThemePaletteCheckBoxScope - Theme Islands Darcula: Checkbox.Foreground.Disabled.Dark is deprecated for new UI themes, use Checkbox.Foreground.Disabled instead
 2026-11-15 23:03:08,773 [1523733]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-1854077437.txt
 2026-11-15 23:04:10,730 [1585690]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-547896843.txt
+2026-11-17 16:34:44,673 [151019633]   WARN - #c.i.i.IdeEventQueue - System clock's jumped back by ~4 sec
+2026-11-18 21:21:58.927 goland[45370:3673788] LWCToolkit_doAWTRunLoopImpl: invalid state: blockingMainThread = YES !
+2026-11-18 21:22:00.468 goland[45370:3673788] LWCToolkit_doAWTRunLoopImpl: invalid state: blockingMainThread = YES !
+2026-11-20 15:34:37,087 [406612047]   WARN - #c.i.p.r.c.ConfigRefreshService - Failed to update registry
+java.lang.IllegalStateException: No updates were stored
+	at com.intellij.platform.registry.cloud.ConfigClient.apply(ConfigClient.kt:89)
+	at com.intellij.platform.registry.cloud.ConfigClient$apply$1.invokeSuspend(ConfigClient.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+2026-11-21 03:34:48,376 [449823336]   WARN - #c.i.p.r.c.ConfigRefreshService - Failed to update registry
+java.lang.IllegalStateException: No updates were stored
+	at com.intellij.platform.registry.cloud.ConfigClient.apply(ConfigClient.kt:89)
+	at com.intellij.platform.registry.cloud.ConfigClient$apply$1.invokeSuspend(ConfigClient.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+2026-11-21 22:40:10,631 [518545591]   WARN - #c.i.i.IdeEventQueue - System clock's jumped back by ~1 sec
+2026-11-22 16:29:11,573 [582686533]   WARN - #c.i.i.IdeEventQueue - System clock's jumped back by ~1 sec
