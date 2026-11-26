@@ -413,3 +413,655 @@ java.lang.Throwable: Assertion failed
 2026-11-22 22:39:39,523 [20607783] SEVERE - #c.i.o.f.i.FileDocumentManagerImpl - OS: Mac OS X
 2026-11-22 22:39:39,524 [20607784] SEVERE - #c.i.o.f.i.FileDocumentManagerImpl - Last Action: EditorBackSpace
 2026-11-22 22:41:23,952 [20712212]   WARN - #com.goide.dfa.api.GoDfaApiImpl - Unable to get function summary for FUNCTION_DECLARATION
+2026-11-23 22:11:13,870 [105302130]   WARN - #LicenseManager - License required for GoLand; details: This license OZE2T7NP0Z has been suspended.
+2026-11-24 09:18:30,617 [145338877]   WARN - com.github.benmanes.caffeine.cache.LocalAsyncCache - Exception thrown during asynchronous load
+java.util.concurrent.CompletionException: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at com.github.benmanes.caffeine.cache.CacheLoader.lambda$asyncLoad$0(CacheLoader.java:113)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1781)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:917)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at com.intellij.util.net.PlatformHttpClient$DelegatingHttpClient.send(PlatformHttpClient.java:394)
+	at com.intellij.util.net.PlatformHttpClient.send(PlatformHttpClient.java:141)
+	at com.intellij.ide.RegionUrlMapper.doLoadMappingOrThrow(RegionUrlMapper.java:156)
+	at com.github.benmanes.caffeine.cache.CacheLoader.lambda$asyncLoad$0(CacheLoader.java:109)
+	... 6 more
+Caused by: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:619)
+	at java.net.http/jdk.internal.net.http.MultiExchange.getExceptionalCF(MultiExchange.java:562)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$2(MultiExchange.java:481)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2221)
+	at java.net.http/jdk.internal.net.http.common.SSLFlowDelegate.stopOnError(SSLFlowDelegate.java:1021)
+	at java.base/java.util.concurrent.CompletableFuture.uniExceptionally(CompletableFuture.java:1011)
+	at java.base/java.util.concurrent.CompletableFuture$UniExceptionally.tryFire(CompletableFuture.java:995)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2221)
+	at java.net.http/jdk.internal.net.http.common.SubscriberWrapper$DownstreamPusher.run1(SubscriberWrapper.java:295)
+	at java.net.http/jdk.internal.net.http.common.SubscriberWrapper$DownstreamPusher.run(SubscriberWrapper.java:259)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:182)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.common.SubscriberWrapper.errorCommon(SubscriberWrapper.java:421)
+	at java.net.http/jdk.internal.net.http.common.SSLFlowDelegate$Reader.errorCommon(SSLFlowDelegate.java:389)
+	at java.net.http/jdk.internal.net.http.common.SubscriberWrapper.onError(SubscriberWrapper.java:412)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadSubscription.signalCompletion(SocketTube.java:649)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:859)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalError(SocketTube.java:808)
+	at java.net.http/jdk.internal.net.http.SocketTube.signalClosed(SocketTube.java:159)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.close(PlainHttpConnection.java:431)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.close(AsyncSSLConnection.java:117)
+	at java.net.http/jdk.internal.net.http.Exchange$ConnectionAborter.closeConnection(Exchange.java:169)
+	at java.net.http/jdk.internal.net.http.Exchange$ConnectionAborter.closeConnection(Exchange.java:152)
+	at java.net.http/jdk.internal.net.http.Exchange.cancel(Exchange.java:259)
+	at java.net.http/jdk.internal.net.http.MultiExchange.cancel(MultiExchange.java:259)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection$ConnectTimerEvent.handle(PlainHttpConnection.java:102)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.purgeTimeoutsAndReturnNextDeadline(HttpClientImpl.java:1751)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1348)
+Caused by: java.net.ConnectException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:620)
+	... 38 more
+2026-11-24 09:18:40,730 [145348990]   WARN - #c.i.p.r.c.ConfigRefreshService - Failed to update registry
+java.lang.IllegalStateException: No updates were stored
+	at com.intellij.platform.registry.cloud.ConfigClient.apply(ConfigClient.kt:89)
+	at com.intellij.platform.registry.cloud.ConfigClient$apply$1.invokeSuspend(ConfigClient.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+2026-11-24 10:49:13,608 [150781868]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-1606920974.txt
+2026-11-24 10:49:27,317 [150795577]   WARN - #c.i.o.v.i.LineStatusTrackerManager - Tracker is being held on dispose by EditorImpl[LightVirtualFile: /Dummy.txt]; file: /Dummy.txt
+2026-11-24 10:49:27,318 [150795578]   WARN - #c.i.o.v.i.LineStatusTrackerManager - Tracker is being held on dispose by EditorImpl[LightVirtualFile: /terminal_output]; file: /terminal_output
+2026-11-24 10:49:27,368 [150795628] SEVERE - #c.i.o.a.i.ApplicationImpl - Failed to save settings
+com.intellij.openapi.application.impl.ApplicationImpl$1ApplicationExitException: java.lang.IllegalStateException: This job has not completed yet
+	at com.intellij.openapi.application.impl.ApplicationImpl.logErrorDuringExit(ApplicationImpl.java:939)
+	at com.intellij.openapi.application.impl.ApplicationImpl.destructApplication(ApplicationImpl.java:838)
+	at com.intellij.openapi.application.impl.ApplicationImpl.doExit(ApplicationImpl.java:788)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:773)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:742)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at com.intellij.ide.n.f.nW.T(nW.java:184)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:236)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:198)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.runWriteIntentReadAction(NestedLocksThreadingSupport.kt:705)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:1094)
+	at com.intellij.openapi.application.impl.ApplicationImpl$7.lambda$run$0(ApplicationImpl.java:648)
+	at com.intellij.concurrency.ThreadContext.installThreadContext(threadContext.kt:305)
+	at com.intellij.openapi.application.impl.ApplicationImpl$7.run(ApplicationImpl.java:646)
+	at com.intellij.util.concurrency.ChildContext$runInChildContext$1.invoke(propagation.kt:192)
+	at com.intellij.util.concurrency.ChildContext$runInChildContext$1.invoke(propagation.kt:192)
+	at com.intellij.util.concurrency.ChildContext.runInChildContext(propagation.kt:198)
+	at com.intellij.util.concurrency.ChildContext.runInChildContext(propagation.kt:192)
+	at com.intellij.util.concurrency.ContextRunnable.lambda$run$0(ContextRunnable.java:26)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.util.concurrency.ContextRunnable.run(ContextRunnable.java:25)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1$0(NonBlockingFlushQueue.kt:334)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:928)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1(NonBlockingFlushQueue.kt:333)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1(NonBlockingFlushQueue.kt:330)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.tryRunWriteIntentReadAction(NestedLocksThreadingSupport.kt:747)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent(NonBlockingFlushQueue.kt:326)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.flushNow(NonBlockingFlushQueue.kt:305)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.FLUSH_NOW$lambda$0(NonBlockingFlushQueue.kt:167)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:732)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:711)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:721)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:574)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0$0$0(IdeEventQueue.kt:378)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$0(IdeEventQueue.kt:1111)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:114)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1111)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0(IdeEventQueue.kt:376)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:416)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy(PlatformTaskSupport.kt:700)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy$lambda$0(PlatformTaskSupport.kt:708)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy(PlatformTaskSupport.kt:707)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking$lambda$0(shutdown.kt:57)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking(shutdown.kt:111)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking(shutdown.kt:46)
+	at com.intellij.openapi.application.impl.ApplicationImpl.disposeContainer(ApplicationImpl.java:323)
+	at com.intellij.openapi.application.impl.ApplicationImpl.destructApplication(ApplicationImpl.java:892)
+	at com.intellij.openapi.application.impl.ApplicationImpl.doExit(ApplicationImpl.java:788)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:773)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:762)
+	at com.intellij.openapi.application.ex.ApplicationEx.exit(ApplicationEx.java:69)
+	at com.intellij.ui.mac.MacOSApplicationProviderKt$initMacApplication$3$1$1.invokeSuspend(MacOSApplicationProvider.kt:114)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at com.intellij.openapi.application.impl.DispatchedRunnable.run(DispatchedRunnable.kt:42)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:236)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:218)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1$0(NonBlockingFlushQueue.kt:334)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:928)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1(NonBlockingFlushQueue.kt:333)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1(NonBlockingFlushQueue.kt:330)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.tryRunWriteIntentReadAction(NestedLocksThreadingSupport.kt:747)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent(NonBlockingFlushQueue.kt:326)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.flushNow(NonBlockingFlushQueue.kt:305)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.FLUSH_NOW$lambda$0(NonBlockingFlushQueue.kt:167)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:732)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:711)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:721)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:574)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0$0$0(IdeEventQueue.kt:378)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$0(IdeEventQueue.kt:1111)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1111)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0(IdeEventQueue.kt:376)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:416)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+Caused by: java.lang.IllegalStateException: This job has not completed yet
+	at kotlinx.coroutines.JobSupport.getCompletedInternal$kotlinx_coroutines_core(JobSupport.kt:1328)
+	at kotlinx.coroutines.DeferredCoroutine.getCompleted(Builders.common.kt:98)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupport.runWithModalProgressBlockingInternal$lambda$1(PlatformTaskSupport.kt:408)
+	at com.intellij.openapi.application.impl.ModalityKt.inModalContext(modality.kt:12)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupport.runWithModalProgressBlockingInternal(PlatformTaskSupport.kt:373)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupport.runWithModalProgressBlockingInternal$lambda$0(PlatformTaskSupport.kt:356)
+	at com.intellij.openapi.progress.ContextKt.prepareThreadContext$lambda$0(context.kt:93)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.openapi.progress.ContextKt.prepareThreadContext(context.kt:92)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupport.runWithModalProgressBlockingInternal(PlatformTaskSupport.kt:352)
+	at com.intellij.platform.ide.progress.TasksKt.runWithModalProgressBlocking(tasks.kt:205)
+	at com.intellij.configurationStore.SaveAndSyncHandlerImpl.saveSettingsUnderModalProgress(SaveAndSyncHandlerImpl.kt:389)
+	at com.intellij.openapi.application.impl.ApplicationImpl.lambda$destructApplication$7(ApplicationImpl.java:835)
+	at com.intellij.platform.diagnostic.telemetry.helpers.TraceKt.use(trace.kt:29)
+	at com.intellij.openapi.application.impl.ApplicationImpl.destructApplication(ApplicationImpl.java:834)
+	... 89 more
+2026-11-24 10:49:27,372 [150795632] SEVERE - #c.i.o.a.i.ApplicationImpl - GoLand 2026.1.3  Build #GO-261.25134.147
+2026-11-24 10:49:27,372 [150795632] SEVERE - #c.i.o.a.i.ApplicationImpl - JDK: 25.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2026-11-24 10:49:27,372 [150795632] SEVERE - #c.i.o.a.i.ApplicationImpl - OS: Mac OS X
+2026-11-24 10:49:29,636 [150797896]   WARN - #c.i.u.n.AppShutdownProxySelector - network access during/after app shutdown
+java.lang.Throwable
+	at com.intellij.util.net.AppShutdownProxySelector.select(JdkProxyProvider.kt:153)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:273)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at jcef/com.jetbrains.cef.remote.thrift.transport.TSocket.open(TSocket.java:226)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.isConnectable(NativeServerManager.java:182)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.isRunning(NativeServerManager.java:256)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.isRunning(NativeServerManager.java:238)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.lambda$waitForStopped$8(NativeServerManager.java:418)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.waitFor(NativeServerManager.java:431)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.waitForStopped(NativeServerManager.java:418)
+	at jcef/com.jetbrains.cef.remote.CefServer.lambda$stop$5(CefServer.java:277)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-11-24 10:49:29,641 [150797901]   WARN - #c.i.u.n.AppShutdownProxySelector - network access during/after app shutdown
+java.lang.Throwable
+	at com.intellij.util.net.AppShutdownProxySelector.select(JdkProxyProvider.kt:153)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:273)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at jcef/com.jetbrains.cef.remote.thrift.transport.TSocket.open(TSocket.java:226)
+	at jcef/com.jetbrains.cef.remote.RpcExecutor.openTcpTransport(RpcExecutor.java:40)
+	at jcef/com.jetbrains.cef.remote.RpcExecutor.openTransport(RpcExecutor.java:31)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.isRunning(NativeServerManager.java:262)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.isRunning(NativeServerManager.java:238)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.lambda$waitForStopped$8(NativeServerManager.java:418)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.waitFor(NativeServerManager.java:431)
+	at jcef/com.jetbrains.cef.remote.NativeServerManager.waitForStopped(NativeServerManager.java:418)
+	at jcef/com.jetbrains.cef.remote.CefServer.lambda$stop$5(CefServer.java:277)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Starting cer server. Pre-initialize spent 125 ms.
+2026-11-24 10:51:37,874 [   6551]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.openapi.project.impl.ProjectStoreFactory: com.intellij.configurationScript.providers.ConfigurationScriptProjectStoreFactory attempts to override com.intellij.configurationStore.PlatformLangProjectStoreFactory, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-24 10:51:37,883 [   6560]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.goide.watchers.GoFileWatcherFormatOnSavePresentationService attempts to override com.goide.formatter.GoFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-24 10:51:37,885 [   6562]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.modcommand.ModCommandExecutor: com.jetbrains.rdserver.ui.intentions.RemoteModCommandExecutor attempts to override com.intellij.lang.impl.modcommand.ModCommandExecutorImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-24 10:51:38,022 [   6699]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.intellij.go.linter.fmt.GoLinterFmtOnSavePresentationService attempts to override com.goide.watchers.GoFileWatcherFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+2026-11-24 10:51:40,699 [   9376]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - Discovery connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-24 10:51:41,570 [  10247]   WARN - #c.i.u.n.s.ConfirmingTrustManager - Received an empty list of custom trusted root certificates from the system. Check log above for possible errors, enable debug logging in category 'org.jetbrains.nativecerts' for more information
+2026-11-24 10:51:41.993 goland[1024:8159] *** WARNING: References to Carbon menus are disallowed with AppKit menu system on macOS 14 and newer. Use instances of NSMenu and NSMenuItem directly instead. See https://developer.apple.com/documentation/macos-release-notes/appkit-release-notes-for-macos-14#Menus
+2026-11-24 10:51:42,386 [  11063]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-24 10:51:48,725 [  17402]   WARN - #c.i.o.f.i.EditorCompositeModelManager - Cannot use saved provider list (savedProviders={split-provider[text-editor;markdown-preview-editor]=[Element: <state/>]}, resolvedProvider=[])
+2026-11-24 10:52:07,237 [  35914]   WARN - #c.i.o.p.i.ProjectFrameAllocator - Timed out waiting for editor to become available on project open (timeout=10s, file=file:///Users/huhongjian/code/learnGo/solutions/dfs/acwing842.go, project=learnGo)
+2026-11-24 10:52:09,321 [  37998]   WARN - #c.i.o.a.i.ActionUpdater - 3170 ms total to grab EDT 1 times to expand ToolWindowHeader$2#expandGroup@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2). Use `ActionUpdateThread.BGT`.
+2026-11-24 10:52:09,323 [  38000]   WARN - #c.i.o.a.i.ActionUpdater - 14281 ms total to grab EDT 3 times to expand EditorMarkupModelImpl$StatusToolbarGroup#expandGroup@EditorInspectionsToolbar (com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusToolbarGroup). Use `ActionUpdateThread.BGT`.
+2026-11-24 10:52:10.599 cef_server[1162:10968] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
+2026-11-24 10:52:10,679 [  39356]   WARN - go-linter - Command execution failed with exit code 1
+2026-11-24 10:52:10,679 [  39356]   WARN - #LicenseManager - License required; details: N/A
+2026-11-24 10:52:10,679 [  39356]   WARN - #c.i.v.g.r.GitRepositoriesHolder - State of repository RepositoryId(projectId=ProjectId#sae24lu1u6ijjtqei67a, rootPath=/Users/huhongjian/code/learnGo) is not synchronized. Known repositories are: 
+2026-11-24 10:52:11.138 cef_server[1162:10798] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
+2026-11-24 10:52:13,121 [  41798]   WARN - #c.i.o.a.i.ActionUpdater - 6409 ms total to grab EDT 2 times to expand DefaultActionGroup#expandGroup@ContextToolbar (DefaultActionGroup). Use `ActionUpdateThread.BGT`.
+2026-11-24 10:52:13,123 [  41800]   WARN - #c.i.o.a.i.ActionUpdater - 6250 ms total to grab EDT 2 times to expand DefaultActionGroup#expandGroup@ContextToolbar (DefaultActionGroup) "EditorContextBarMenu". Use `ActionUpdateThread.BGT`.
+2026-11-24 10:52:13,206 [  41883]   WARN - #c.i.o.a.i.ActionUpdater - 4707 ms total to grab EDT 5 times to expand ToolWindowHeader$2#expandGroup@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2). Use `ActionUpdateThread.BGT`.
+2026-11-24 10:52:13,416 [  42093]   WARN - #c.i.o.a.i.ActionUpdater - 5769 ms total to grab EDT 3 times to expand EditorMarkupModelImpl$StatusToolbarGroup#expandGroup@EditorInspectionsToolbar (com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusToolbarGroup). Use `ActionUpdateThread.BGT`.
+2026-11-24 10:52:25,649 [  54326]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-1790564993.txt
+2026-11-24 10:52:32,662 [  61339]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-697325615.txt
+2026-11-24 10:53:53.112 goland[1024:8159] IMKClient Stall detected, *please Report* your user scenario attaching a spindump (or sysdiagnose) that captures the problem - (imkxpc_selectedRangeWithReply:) block performed very slowly (1.22 secs).
+2026-11-24 10:53:54,323 [ 143000] SEVERE - #c.i.o.u.ObjectTree - CE must not be thrown from a dispose() implementation
+java.lang.RuntimeException: CE must not be thrown from a dispose() implementation
+	at com.intellij.openapi.util.ObjectTree.handleExceptions(ObjectTree.java:243)
+	at com.intellij.openapi.util.ObjectTree.runWithTrace(ObjectTree.java:169)
+	at com.intellij.openapi.util.ObjectTree.executeAll(ObjectTree.java:199)
+	at com.intellij.openapi.util.Disposer.dispose(Disposer.java:217)
+	at com.intellij.openapi.util.Disposer.dispose(Disposer.java:205)
+	at com.intellij.openapi.editor.ex.util.EditorUtil.lambda$disposeWithEditor$24(EditorUtil.java:1031)
+	at com.intellij.openapi.editor.impl.EditorThreadingImpl.doRun(EditorThreadingImpl.kt:30)
+	at com.intellij.openapi.editor.EditorThreading$Companion.run(EditorThreading.kt:37)
+	at com.intellij.openapi.editor.EditorThreading.run(EditorThreading.kt)
+	at com.intellij.openapi.editor.ex.util.EditorUtil.disposeWithEditor(EditorUtil.java:1029)
+	at com.intellij.codeInsight.hints.VcsCodeVisionProviderKt.handleAnnotationRegistration$lambda$4(VcsCodeVisionProvider.kt:273)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:236)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:198)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.runWriteIntentReadAction(NestedLocksThreadingSupport.kt:705)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:1094)
+	at com.intellij.openapi.application.impl.ApplicationImpl$7.lambda$run$0(ApplicationImpl.java:648)
+	at com.intellij.concurrency.ThreadContext.installThreadContext(threadContext.kt:305)
+	at com.intellij.openapi.application.impl.ApplicationImpl$7.run(ApplicationImpl.java:646)
+	at com.intellij.util.concurrency.ChildContext$runInChildContext$1.invoke(propagation.kt:192)
+	at com.intellij.util.concurrency.ChildContext$runInChildContext$1.invoke(propagation.kt:192)
+	at com.intellij.util.concurrency.ChildContext.runInChildContext(propagation.kt:198)
+	at com.intellij.util.concurrency.ChildContext.runInChildContext(propagation.kt:192)
+	at com.intellij.util.concurrency.ContextRunnable.lambda$run$0(ContextRunnable.java:26)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.util.concurrency.ContextRunnable.run(ContextRunnable.java:25)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1$0(NonBlockingFlushQueue.kt:334)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:928)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1(NonBlockingFlushQueue.kt:333)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1(NonBlockingFlushQueue.kt:330)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.tryRunWriteIntentReadAction(NestedLocksThreadingSupport.kt:747)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent(NonBlockingFlushQueue.kt:326)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.flushNow(NonBlockingFlushQueue.kt:305)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.FLUSH_NOW$lambda$0(NonBlockingFlushQueue.kt:167)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:732)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:711)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:721)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:574)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0$0$0(IdeEventQueue.kt:378)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$0(IdeEventQueue.kt:1111)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:114)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1111)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0(IdeEventQueue.kt:376)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:416)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy(PlatformTaskSupport.kt:700)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy$lambda$0(PlatformTaskSupport.kt:708)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy(PlatformTaskSupport.kt:707)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking$lambda$0(shutdown.kt:57)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking(shutdown.kt:111)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking(shutdown.kt:46)
+	at com.intellij.openapi.application.impl.ApplicationImpl.disposeContainer(ApplicationImpl.java:323)
+	at com.intellij.openapi.application.impl.ApplicationImpl.destructApplication(ApplicationImpl.java:892)
+	at com.intellij.openapi.application.impl.ApplicationImpl.doExit(ApplicationImpl.java:788)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:773)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:742)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at com.intellij.ide.n.f.nW.T(nW.java:184)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:236)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:198)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.openapi.application.impl.AppImplKt$runnableUnitFunction$1.invoke(appImpl.kt:124)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.runWriteIntentReadAction(NestedLocksThreadingSupport.kt:705)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:1094)
+	at com.intellij.openapi.application.impl.ApplicationImpl$7.lambda$run$0(ApplicationImpl.java:648)
+	at com.intellij.concurrency.ThreadContext.installThreadContext(threadContext.kt:305)
+	at com.intellij.openapi.application.impl.ApplicationImpl$7.run(ApplicationImpl.java:646)
+	at com.intellij.util.concurrency.ChildContext$runInChildContext$1.invoke(propagation.kt:192)
+	at com.intellij.util.concurrency.ChildContext$runInChildContext$1.invoke(propagation.kt:192)
+	at com.intellij.util.concurrency.ChildContext.runInChildContext(propagation.kt:198)
+	at com.intellij.util.concurrency.ChildContext.runInChildContext(propagation.kt:192)
+	at com.intellij.util.concurrency.ContextRunnable.lambda$run$0(ContextRunnable.java:26)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.util.concurrency.ContextRunnable.run(ContextRunnable.java:25)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1$0(NonBlockingFlushQueue.kt:334)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:928)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1$1(NonBlockingFlushQueue.kt:333)
+	at com.intellij.concurrency.ThreadContext.resetThreadContext(threadContext.kt:294)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent$lambda$1(NonBlockingFlushQueue.kt:330)
+	at com.intellij.platform.locking.impl.NestedLocksThreadingSupport.tryRunWriteIntentReadAction(NestedLocksThreadingSupport.kt:747)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.runNextEvent(NonBlockingFlushQueue.kt:326)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.flushNow(NonBlockingFlushQueue.kt:305)
+	at com.intellij.openapi.application.impl.NonBlockingFlushQueue.FLUSH_NOW$lambda$0(NonBlockingFlushQueue.kt:167)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:732)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:711)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:721)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:574)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0$0$0(IdeEventQueue.kt:378)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$0(IdeEventQueue.kt:1111)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1111)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$0(IdeEventQueue.kt:376)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:416)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+Caused by: com.intellij.serviceContainer.AlreadyDisposedException: Container class com.intellij.openapi.vcs.ProjectLevelVcsManager is already disposed
+	at com.intellij.serviceContainer.ComponentManagerImplKt.throwAlreadyDisposedIfNotUnderIndicatorOrJob(ComponentManagerImpl.kt:1809)
+	at com.intellij.serviceContainer.ComponentManagerImplKt.access$throwAlreadyDisposedIfNotUnderIndicatorOrJob(ComponentManagerImpl.kt:1)
+	at com.intellij.serviceContainer.ComponentManagerImpl.doGetService(ComponentManagerImpl.kt:773)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getService(ComponentManagerImpl.kt:741)
+	at com.intellij.openapi.vcs.ProjectLevelVcsManager$Companion.getInstance(ProjectLevelVcsManager.kt:321)
+	at com.intellij.codeInsight.hints.VcsCodeVisionProviderKt.unregisterAnnotation(VcsCodeVisionProvider.kt:281)
+	at com.intellij.codeInsight.hints.VcsCodeVisionProviderKt.handleAnnotationRegistration$lambda$0(VcsCodeVisionProvider.kt:259)
+	at com.intellij.openapi.util.ObjectTree.runWithTrace(ObjectTree.java:158)
+	... 104 more
+2026-11-24 10:53:54,328 [ 143005] SEVERE - #c.i.o.u.ObjectTree - GoLand 2026.1.3  Build #GO-261.25134.147
+2026-11-24 10:53:54,328 [ 143005] SEVERE - #c.i.o.u.ObjectTree - JDK: 25.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2026-11-24 10:53:54,328 [ 143005] SEVERE - #c.i.o.u.ObjectTree - OS: Mac OS X
+Starting cer server. Pre-initialize spent 332 ms.
+IDE is being shut down
+2026-11-26 23:08:10,419 [    944]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.openapi.project.impl.ProjectStoreFactory: com.intellij.configurationScript.providers.ConfigurationScriptProjectStoreFactory attempts to override com.intellij.configurationStore.PlatformLangProjectStoreFactory, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-26 23:08:10,432 [    957]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.goide.watchers.GoFileWatcherFormatOnSavePresentationService attempts to override com.goide.formatter.GoFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-26 23:08:10,442 [    967]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.modcommand.ModCommandExecutor: com.jetbrains.rdserver.ui.intentions.RemoteModCommandExecutor attempts to override com.intellij.lang.impl.modcommand.ModCommandExecutorImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-11-26 23:08:10,454 [    979]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.codeInsight.actions.onSave.FormatOnSavePresentationService: com.intellij.go.linter.fmt.GoLinterFmtOnSavePresentationService attempts to override com.goide.watchers.GoFileWatcherFormatOnSavePresentationService, but the existing implementation is not overriddable (not declared as 'open=true')
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+2026-11-26 23:08:11,096 [   1621]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - Discovery connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-26 23:08:11.313 goland[4706:231031] *** WARNING: References to Carbon menus are disallowed with AppKit menu system on macOS 14 and newer. Use instances of NSMenu and NSMenuItem directly instead. See https://developer.apple.com/documentation/macos-release-notes/appkit-release-notes-for-macos-14#Menus
+2026-11-26 23:08:11,403 [   1928]   WARN - #c.i.u.n.s.ConfirmingTrustManager - Received an empty list of custom trusted root certificates from the system. Check log above for possible errors, enable debug logging in category 'org.jetbrains.nativecerts' for more information
+2026-11-26 23:08:11,438 [   1963]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection failed with AnnotatedSocketException(SocketException) (No such file or directory: /var/folders/g0/q4sg7xhx7_q4lbgwtwbxmhw40000gn/T/jb.station.huhongjian.sock)
+2026-11-26 23:08:14,479 [   5004]   WARN - #c.i.o.f.i.EditorCompositeModelManager - Cannot use saved provider list (savedProviders={split-provider[text-editor;markdown-preview-editor]=[Element: <state/>]}, resolvedProvider=[])
+2026-11-26 23:08:18.886 cef_server[4726:231338] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
+2026-11-26 23:08:19.093 cef_server[4726:231290] Swizzled NSUserNotificationCenter: blocking defaultUserNotificationCenter
+2026-11-26 23:08:19,130 [   9655]   WARN - go-linter - Command execution failed with exit code 1
+2026-11-26 23:08:19,146 [   9671]   WARN - #LicenseManager - License required; details: N/A
+2026-11-26 23:08:19,371 [   9896]   WARN - #c.i.v.g.r.GitRepositoriesHolder - State of repository RepositoryId(projectId=ProjectId#sv4dq7qmmqunn6cj017o, rootPath=/Users/huhongjian/code/learnGo) is not synchronized. Known repositories are: 
+2026-11-26 23:08:20,259 [  10784]   WARN - #c.i.o.a.i.ActionUpdater - 3394 ms total to grab EDT 2 times to expand DefaultActionGroup#expandGroup@ContextToolbar (DefaultActionGroup). Use `ActionUpdateThread.BGT`.
+2026-11-26 23:08:20,611 [  11136]   WARN - #c.i.o.a.i.ActionUpdater - 5204 ms total to grab EDT 5 times to expand ToolWindowHeader$2#expandGroup@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2). Use `ActionUpdateThread.BGT`.
+2026-11-26 23:08:34,382 [  24907]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-926499129.txt
+2026-11-26 23:12:12,195 [ 242720]   WARN - #c.i.o.a.ApplicationManager - Cannot execute background write action in 10 seconds. Thread dump is stored in file:///Users/huhongjian/Library/Logs/JetBrains/GoLand2026.1/bg-wa/thread-dump-17650597.txt
+2026-11-26 23:33:28,066 [1518591]   WARN - org.apache.velocity.deprecation - configuration key 'resource.loader' has been deprecated in favor of 'resource.loaders'
+2026-11-26 23:33:28,068 [1518593]   WARN - org.apache.velocity.deprecation - configuration key 'includes.resource.loader.instance' has been deprecated in favor of 'resource.loader.includes.instance'
+2026-11-26 23:34:20,263 [1570788]   WARN - #org.intellij.plugins.markdown.ui.preview.jcef.impl.JcefBrowserPipeImpl - No subscribers for documentReady!
+Attached data: 
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by com.jetbrains.cef.JCefAppConfig$6 in module jcef (jrt:/jcef)
+WARNING: Use --enable-native-access=jcef to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-11-26 23:43:37,196 [2127721]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileMenu.RemoteDevelopmentActions.Gateway' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,205 [2127730]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ViewToolbarActionsGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,221 [2127746]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'OpenPprofProfileGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,224 [2127749]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteExternalToolsGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,226 [2127751]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.MainMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,226 [2127751]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Specific' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,229 [2127754]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,229 [2127754]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu.FileActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,244 [2127769]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Shelf.Operations.ContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,244 [2127769]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Shelf.ChangesBrowser.ContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,249 [2127774]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Frontend.ChangesView.GroupBy' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,255 [2127780]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Log.HighlightersActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,260 [2127785]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.SetColorItemGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,262 [2127787]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.FindUsagesActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,262 [2127787]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.RefactoringActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,270 [2127795]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.VcsWrapperGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,302 [2127827]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.BuiltInExtractor.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,302 [2127827]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.CsvExtractors.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,303 [2127828]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.ScriptedExtractors.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,323 [2127848]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.ChooseAggregators.ScriptedGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,325 [2127850]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Database.KeymapGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,326 [2127851]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.Group.Common.Last' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,326 [2127851]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.NavigationAndEditing.ChangeSampleSize.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,326 [2127851]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.PopupGroup.DatabaseCellActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,326 [2127851]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,326 [2127851]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.Database.GoTo' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,329 [2127854]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.MoreOptions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,329 [2127854]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.ChooseExtractor.Skip.SubGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,330 [2127855]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.PopupGroup.Database.QuickDoc' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,331 [2127856]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.Jdbc.Common' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,332 [2127857]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'SqlGenerateGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,333 [2127858]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.Jdbc.Right' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,333 [2127858]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TabPopupGroup.Embedded' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,333 [2127858]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.InEditorTableResult.Horizontal.PreviewAndSubmit.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,333 [2127858]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ScriptGenerator.Options.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,335 [2127860]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Database.EditorTabPopupMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,335 [2127860]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileEditor.ImportToDatabase.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,336 [2127861]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.Jdbc.Left' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,336 [2127861]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.PopupGroup.OtherDatabaseActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.PopupGroup.OpenDataEditor' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.PopupGroup.Database' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.EditMaximized.Value.ChangeType.SubGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.InEditorTableResult.Vertical.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DbStructureEditor.Toolbar.Ext' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.NavigationAndEditing.Last.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.Group.Secondary.Top' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.PopupGroup.Whatever' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ShowUmlDiagram' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,337 [2127862]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.Data' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,338 [2127863]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Database.KeymapGroup.Hidden' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,338 [2127863]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.Options.Bottom' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,338 [2127863]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.Jdbc.RunContextGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,339 [2127864]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Console.TableResult.NavigationAndEditing.JdbcCancel.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,339 [2127864]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ShowUmlDiagramPopup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,343 [2127868]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,354 [2127879]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'AsyncGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,354 [2127879]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'AsyncDiagnosticGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,356 [2127881]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'devcontainer.ui.dashboard.DevcontainerDashboardAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,356 [2127881]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Dev.Container.File.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,363 [2127888]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Dev.Container.Connect' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,363 [2127888]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Dev.PsiViewerActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,363 [2127888]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Uml.NodeCellEditorPopup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,363 [2127888]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Diagram.DefaultGraphToolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,364 [2127889]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'UML.DefaultGraphPopup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,364 [2127889]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Uml.PsiElement.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,365 [2127890]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewPopup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,365 [2127890]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.5' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,365 [2127890]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.4' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,365 [2127890]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.1' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,365 [2127890]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.3' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,365 [2127890]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.2' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,367 [2127892]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServers.OpenProject.FromLabelPath' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,367 [2127892]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.Top' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,368 [2127893]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RegistryViewToolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,370 [2127895]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServers.ComposeUp' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,370 [2127895]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.Backend.4' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,370 [2127895]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.Backend.5' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,370 [2127895]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.Backend.2' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,370 [2127895]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.Backend.3' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,370 [2127895]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Docker.RemoteServersViewToolbar.Backend.1' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,372 [2127897]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MicroservicesExamplesOptionsMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,372 [2127897]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EndpointsActions.EmptyTextActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,373 [2127898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EndpointsActions.FilterToolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,373 [2127898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MicroservicesExamplesToolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,373 [2127898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EndpointsActions.Title' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,373 [2127898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EndpointsActions.ContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,373 [2127898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'PublishGroup.Base' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,373 [2127898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DeploymentGroup.Basic' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,373 [2127898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteHostViewPopupMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,378 [2127903]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'AIAssistantHubPopupAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,379 [2127904]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'AIHub.NotInstalled' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,380 [2127905]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ml.diagnostics.DumpDiagnosticsAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,383 [2127908]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Experimental.Branch.Popup.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,386 [2127911]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.BranchOperationGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,390 [2127915]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Stage.Toolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,390 [2127915]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Hosting.Copy.Link.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,395 [2127920]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Log.ContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,395 [2127920]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Stage.Local.File.Menu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,395 [2127920]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.ChangesView.Conflicts' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,398 [2127923]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Stage.Tree.Menu.LocalHistory' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,398 [2127923]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Hosting.Open.In.Browser.Group' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,399 [2127924]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branch' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,402 [2127927]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitMainToolbarQuickActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,402 [2127927]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitMergeRebaseWidgetGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,403 [2127928]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.ToolbarWidget.CreateRepository' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,404 [2127929]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'git.branches.popup.filter.by.separator' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,405 [2127930]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.FileHistory.ContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,408 [2127933]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Ongoing.Rebase.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,408 [2127933]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitRepositoryActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,413 [2127938]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Stash.ChangesBrowser.ContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,417 [2127942]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Log.Branches.Toolbar.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,417 [2127942]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Stage.Tree.Menu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,417 [2127942]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branch.Placeholder' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,418 [2127943]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branches.Popup.SpeedSearch' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,419 [2127944]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Log.ContextMenu.CheckoutBrowse' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,420 [2127945]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.WorkingTrees.ToolwindowGroup.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,420 [2127945]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.LogContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,420 [2127945]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.FileActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,420 [2127945]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Log.Toolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,420 [2127945]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.ToolbarWidget.CreateRepository.LocalHistory' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,421 [2127946]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branch.Tracked' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,421 [2127946]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branch.Backend.Checkout' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,422 [2127947]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.WorkingTrees.ToolwindowGroup.Toolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,422 [2127947]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branch.Backend' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,422 [2127947]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Stash.Operations.ContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,426 [2127951]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branches.List' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,426 [2127951]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.Branch.Checkout' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,427 [2127952]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MainToolbarQuickActions.VCS' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,431 [2127956]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Github.PullRequest.ToolWindow.List.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,431 [2127956]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Github.PullRequest.Changes.Toolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,431 [2127956]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Github.PullRequest.Details.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,431 [2127956]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitHub.Pull.Request.Create.Title.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,433 [2127958]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Github.PullRequest.Timeline.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,433 [2127958]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Github.PullRequest.Changes.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,433 [2127958]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Github.Pull.Request.Branch.Popup.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,436 [2127961]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitLab.Merge.Request.Details.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,437 [2127962]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitLab.Merge.Request.Changes.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,437 [2127962]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitLab.Merge.Request.Timeline.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,437 [2127962]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitLab.Merge.Request.Timeline.Error.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,437 [2127962]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitLab.Merge.Request.List.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,437 [2127962]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitLab.Merge.Request.Review.Editor.Branch.Popup.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,438 [2127963]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GitLab.Merge.Request.Create.Title.Actions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,438 [2127963]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GoGenerateForStruct' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,438 [2127963]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GoTypeHierarchyPopupMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,438 [2127963]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GoCallHierarchyPopupMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,439 [2127964]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GoTestGenerateGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,440 [2127965]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'GoNonModalWelcomeScreenNewActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,440 [2127965]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'WelcomeScreen.Platform.NewProject' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,440 [2127965]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'NonModalWelcomeScreen.LeftTabActions.New' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,441 [2127966]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'HTTPClient.Toolbar.ProvidedActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,443 [2127968]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'com.intellij.httpClient.microservices.actions.GenerateHttpRequestFromStructureAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,444 [2127969]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Images.ScientificGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,444 [2127969]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Images.ThumbnailViewActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,444 [2127969]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Images.ImageViewActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,444 [2127969]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Images.ScientificEditorToolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,447 [2127972]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Images.ImageOperationsGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,447 [2127972]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Images.EditorToolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,447 [2127972]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Images.EditorPopupMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,448 [2127973]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'JavaScriptDebugger.HideActionsGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,451 [2127976]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ShowJsbtTasks' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,452 [2127977]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'JSTestRunLineMarkersAdditionalActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,452 [2127977]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'JsTestFrameworkCodeGeneratorGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,455 [2127980]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileMenu.RemoteDevelopmentActions.Daemon' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,455 [2127980]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'NonModalWelcomeScreen.RemoteDevelopmentActions.Daemon' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,457 [2127982]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Kubernetes.EphemeralContainers.Recents' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,459 [2127984]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Kubernetes.ResourceActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,459 [2127984]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Kubernetes.Log.TextFilterSettings' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,459 [2127984]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Kubernetes.ClusterNodeActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,459 [2127984]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Kubernetes.DeploymentActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,462 [2127987]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Markdown.TableActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,462 [2127987]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Markdown.PreviewGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,462 [2127987]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Markdown.EditorContextMenuGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,462 [2127987]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Markdown.InsertGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,462 [2127987]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Markdown.TableColumnActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,462 [2127987]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Markdown.TableRowActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,463 [2127988]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'SwEditorHoverActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,463 [2127988]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'swagger.GutterGenerateActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,464 [2127989]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'PackageChecker.ProblemTab.ToolBar.ShowSafe' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,464 [2127989]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'PackageChecker.AnalyzeActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,464 [2127989]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'PackageChecker.ProblemTab.ToolBar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,464 [2127989]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'PackageChecker.Toolwindow.Tree.Popup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,464 [2127989]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'StartProfileGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,464 [2127989]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'IndexingDiagnosticGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,464 [2127989]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DiagnosticGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,465 [2127990]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Qodana.OpenQodanaCloudSettingsAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,466 [2127991]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Qodana.ProblemsView.Link' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,466 [2127991]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Qodana.OpenQodanaCloudReportAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,467 [2127992]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Qodana.ProblemsView.Login' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,467 [2127992]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Qodana.ProblemsView' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,468 [2127993]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeTabActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,468 [2127993]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeMainMenuGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,468 [2127993]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'HostCWMManageLicenseGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,468 [2127993]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeNavbarGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,468 [2127993]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMCallSplitButtonActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,468 [2127993]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeMainGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,470 [2127995]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeUsersGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,470 [2127995]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'HostCodeWithMeMainGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,470 [2127995]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'UnattendedHostDropdownGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,470 [2127995]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeHeaderMenuGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,471 [2127996]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ForwardPortAndNavigateInBrowser' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,471 [2127996]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,471 [2127996]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'NavigateInBrowser' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,473 [2127998]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeHeaderMenuAdditionalGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,474 [2127999]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'HostCodeWithMeCallMainGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,474 [2127999]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeUsersActionOldUi' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,474 [2127999]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'UnattendedHostImportantActionsGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,475 [2128000]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMTelephonyGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,475 [2128000]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EnableVoiceCallAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,476 [2128001]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'StopForwardingAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,476 [2128001]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'HostCodeWithMeSubMenuGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,476 [2128001]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'PortForwardingSuggestionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,476 [2128001]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CodeWithMeToolbarGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,476 [2128001]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'PortForwardingPortGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,476 [2128001]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ForwardPortAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,478 [2128003]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CallLabelAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,479 [2128004]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'NonModalWelcomeScreen.RemoteDevelopmentActions.Gateway' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,481 [2128006]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'OpenRemoteDevelopment' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,482 [2128007]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ShGenerateGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,485 [2128010]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Terminal.HyperlinkContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,485 [2128010]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Terminal.ToolWindowActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,486 [2128011]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Terminal.OutputContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,486 [2128011]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Terminal.ReworkedTerminalContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,486 [2128011]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Terminal.PromptToolbar' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,486 [2128011]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'TerminalToolwindowActionGroup' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,486 [2128011]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Terminal.PromptContextMenu' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,497 [2128022]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'WelcomeScreen.CustomRecentProjectActions' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,519 [2128044]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileChooser.GotoModule' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,534 [2128059]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ActivateUnitTestsToolWindow' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,537 [2128062]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'context.save' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,539 [2128064]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'TestGestureAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,543 [2128068]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MethodOverloadSwitchUp' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,545 [2128070]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Compile' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,546 [2128071]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CompileDirty' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,546 [2128071]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ValidateXml' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,547 [2128072]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ToggleFlameGraphViewAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,547 [2128072]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MethodOverloadSwitchDown' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,548 [2128073]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ChangesView.GroupBy.Module' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,549 [2128074]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'context.load' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,549 [2128074]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'UiInspector' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,552 [2128077]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ChangeTypeSignature' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,552 [2128077]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ShowProjectStructureSettings' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,558 [2128083]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ActivateNuGetToolWindow' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,563 [2128088]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ActivateFavoritesToolWindow' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,564 [2128089]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Profiler.ExpandAllGroups' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,565 [2128090]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EAPFeedbackToolbarAction' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,570 [2128095]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Profiler.CollapseAllGroups' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,570 [2128095]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'SettingsSyncSeparator' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,570 [2128095]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'SwitchHeaderSource' template presentation. Showing its action-id instead
+2026-11-26 23:43:37,572 [2128097]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'InactiveStopActionPlaceholder' template presentation. Showing its action-id instead
+2026-11-26 23:43:40,083 [2130608]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'SharedIndexes.DumpSharedIndex' template presentation. Showing its action-id instead
+2026-11-27 00:23:03,253 [4493778]   WARN - #org.intellij.plugins.markdown.ui.preview.jcef.impl.JcefBrowserPipeImpl - No subscribers for documentReady!
+Attached data: 
