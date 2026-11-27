@@ -1068,3 +1068,5 @@ Attached data:
 2026-11-27 22:07:50,340 [82780865]   WARN - #c.i.i.IdeEventQueue - System clock's jumped back by ~1 sec
 2026-11-27 22:20:17,475 [83528000]   WARN - #org.intellij.plugins.markdown.ui.preview.jcef.impl.JcefBrowserPipeImpl - No subscribers for documentReady!
 Attached data: 
+2026-11-27 23:19:54,659 [87105184]   WARN - #org.intellij.plugins.markdown.ui.preview.jcef.impl.JcefBrowserPipeImpl - No subscribers for documentReady!
+Attached data: 
