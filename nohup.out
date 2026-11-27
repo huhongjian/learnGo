@@ -1070,3 +1070,46 @@ Attached data:
 Attached data: 
 2026-11-27 23:19:54,659 [87105184]   WARN - #org.intellij.plugins.markdown.ui.preview.jcef.impl.JcefBrowserPipeImpl - No subscribers for documentReady!
 Attached data: 
+2026-11-27 23:46:44,763 [88715288]   WARN - #org.intellij.plugins.markdown.ui.preview.jcef.impl.JcefBrowserPipeImpl - No subscribers for documentReady!
+Attached data: 
+2026-11-28 00:10:17,956 [90128481] SEVERE - #c.i.o.f.i.FileDocumentManagerImpl - Assertion failed
+java.lang.Throwable: Assertion failed
+	at com.intellij.openapi.diagnostic.Logger.assertTrue(Logger.java:474)
+	at com.intellij.openapi.diagnostic.Logger.assertTrue(Logger.java:483)
+	at com.intellij.openapi.fileEditor.impl.FileDocumentManagerImpl.removeFromUnsaved(FileDocumentManagerImpl.java:501)
+	at com.intellij.openapi.fileEditor.impl.FileDocumentManagerImpl.doSaveDocument(FileDocumentManagerImpl.java:388)
+	at com.intellij.openapi.fileEditor.impl.FileDocumentManagerImpl.doSave(FileDocumentManagerImpl.java:317)
+	at com.intellij.openapi.fileEditor.impl.FileDocumentManagerImpl.saveDocuments(FileDocumentManagerImpl.java:271)
+	at com.intellij.openapi.fileEditor.impl.FileDocumentManagerImpl.saveAllDocuments(FileDocumentManagerImpl.java:252)
+	at com.intellij.configurationStore.SaveAndSyncHandlerImpl$saveDocumentsInBackgroundWriteAction$1.invokeSuspend(SaveAndSyncHandlerImpl.kt:320)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:1188)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+2026-11-28 00:10:17,960 [90128485] SEVERE - #c.i.o.f.i.FileDocumentManagerImpl - GoLand 2026.1.3  Build #GO-261.25134.147
+2026-11-28 00:10:17,960 [90128485] SEVERE - #c.i.o.f.i.FileDocumentManagerImpl - JDK: 25.0.3; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2026-11-28 00:10:17,960 [90128485] SEVERE - #c.i.o.f.i.FileDocumentManagerImpl - OS: Mac OS X
+2026-11-28 00:10:17,960 [90128485] SEVERE - #c.i.o.f.i.FileDocumentManagerImpl - Last Action: EditorBackSpace
+2026-11-28 00:17:58,299 [90588824]   WARN - #o.j.c.f.l.l.s.c.FullLineCompletionInputBuilder - LazyStandaloneCoroutine was cancelled
+java.lang.Throwable: Control-flow exceptions (e.g. this class kotlinx.coroutines.JobCancellationException) should never be logged. Instead, these should have been rethrown if caught.
+	at com.intellij.openapi.diagnostic.Logger.ensureNotControlFlow(Logger.java:506)
+	at com.intellij.idea.IdeaLogger.warn(IdeaLogger.java:168)
+	at com.intellij.openapi.diagnostic.Logger.warn(Logger.java:353)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.buildRecentContext(FullLineCompletionInputBuilder.kt:152)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder.access$buildRecentContext(FullLineCompletionInputBuilder.kt:30)
+	at org.jetbrains.completion.full.line.local.suggest.collector.FullLineCompletionInputBuilder$buildRecentContext$1.invokeSuspend(FullLineCompletionInputBuilder.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.UndispatchedCoroutine.afterResume(CoroutineContext.kt:277)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:47)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+Caused by: kotlinx.coroutines.JobCancellationException: LazyStandaloneCoroutine was cancelled; job=LazyStandaloneCoroutine{Cancelling}@3bb9e8ba
